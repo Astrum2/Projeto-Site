@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Primeiro Projeto</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" title="home"  class="header-logo">
+                <img src="Imagens/4490a8de8378e5a4c46b29b328488453-removebg-preview.png" alt="Logo Controle">
+            </a>
+
+            <a href="javascript:mostrarMenu()" title="menu" class="header-menu">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" title="Home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sobre.html" title="Sobre">
+                            Sobre
+                        </a>
+                    </li>
+                    <li>
+                        <a href="galeria.html" title="Galeria">
+                            Galeria
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contato.html" title="Contato">
+                            Contato
+                        </a>
+                    </li>
+                    <li>
+                        <a href="jogar.html" title="Jogar">
+                            Jogar
+                        </a>
+                    </li>
+                </ul>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        function mostrarMenu(){
+            //document.querySelector(".nav-menu")
+            $(".header-nav").toggle();
+        }
+    </script>
+</body>
+</html>
