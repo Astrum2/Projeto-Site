@@ -84,14 +84,19 @@ body{
         }
     }
     main{
-        .Fotos{
-            .apresentar{
-                background-color: black;
-                color: white;
-                text-transform: uppercase;
-                padding: 10px;
-                border-radius: 5px;
+        .Container{
+            h1{
+                text-align: center;
+                .Faixa{
+                    font: Arial;
+                    background-color: black;
+                    color: white;
+                    padding: 10px;
+                    margin: 20px;
+                    border-radius: 5px;
+                }
             }
+            
         }
     }
 }
