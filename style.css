@@ -44,6 +44,12 @@ body{
                 text-decoration: none;
                 font-weight: bold;
             }
+            .btn{
+                background-color: red;
+            }
+            .btn:hover{
+                background-color: brown;
+            }
         }
     }
 }
