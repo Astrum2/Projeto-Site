@@ -84,6 +84,7 @@ body{
         }
     }
     main{
+        padding: 50px;
         .Container{
             h1{
                 text-align: center;
