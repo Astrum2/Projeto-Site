@@ -83,12 +83,4 @@ body{
             }
         }
     }
-    body{
-        .btn{
-            background-color: black;
-            color: white;
-            text-align: center;
-            align-self: center;
-        }
-    }
 }
