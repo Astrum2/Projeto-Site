@@ -7,11 +7,6 @@ body{
     color: #333;
     font-size: 18px;
 }
-
-.fa-solid, .fas {
-    font-weight: 900;
-}
-
 .container{
     width: 80%;
     margin: auto;
