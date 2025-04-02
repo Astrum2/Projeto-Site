@@ -42,7 +42,10 @@ body{
                 text-transform: uppercase;
                 color: #CCC;
                 text-decoration: none;
+                text-transform: uppercase;
                 font-weight: bold;
+                margin: 10px 0;
+                display: block;
             }
             .btn{
                 background-color: red;
