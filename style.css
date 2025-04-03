@@ -55,6 +55,46 @@ body{
     }
 }
 
+main{
+    padding: 50px;
+    #Apresentação{
+        .Container{
+            width: 90%;
+            margin: auto;
+            h1{
+                text-align: center;
+                .Faixa{
+                    font: Arial;
+                    background-color: black;
+                    color: white;
+                    padding: 10px;
+                    margin: 20px;
+                    border-radius: 5px;
+                }
+            }
+            .grid-2{
+                display: block;
+                .col{
+                    padding: 15px;
+                    img{
+                        width: 110%;
+                        align-items: center;
+                    }
+                }
+            }   
+        }
+    } 
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    .center{
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
 
 @media (min-width: 1000px){
     .header{
@@ -79,11 +119,11 @@ body{
                     .btn{
                         background-color: red;
                         padding: 10px 20px 10px 20px;
-                        border-radius: 10px;
                     }
                     .btn:hover{
                         color: white;
                         background-color: brown;
+                        padding: 10px 20px 10px 20px;
                     }
                 }
             }
@@ -91,19 +131,33 @@ body{
     }
     main{
         padding: 50px;
-        .Container{
-            h1{
-                text-align: center;
-                .Faixa{
-                    font: Arial;
-                    background-color: black;
-                    color: white;
-                    padding: 10px;
-                    margin: 20px;
-                    border-radius: 5px;
+        #Apresentação{
+            .Container{
+                h1{
+                    text-align: center;
+                    .Faixa{
+                        font: Arial;
+                        background-color: black;
+                        color: white;
+                        padding: 10px;
+                        margin: 20px;
+                        border-radius: 5px;
+                    }
+                }
+                .grid-2{
+                    max-width: 1000px;
                 }
             }
-            
+        }
+        
+    }
+    footer{
+        background-color: black;
+        color: white;
+        padding: 50px 0;
+        .center{
+            text-align: center;
+            text-transform: uppercase;
         }
     }
 }
