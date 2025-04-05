@@ -71,17 +71,17 @@
                 <br>
 
                 <label for="email">Digite seu E-Mail:</label>
-                <input type="text" name="email" id="email" placeholder="Digite seu E-mail" required>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required>
 
-                <label for="whatsapp">Digite seu Whatsapp:</label>
-                <input type="number" name="whatsapp" id="whatsapp" placeholder="Digite seu número de whatsapp" required>
+                <label for="telefone">Digite seu telefone:</label>
+                <input type="number" name="telefone" id="telefone" placeholder="Digite seu número de Telefone" required>
 
                 <br>
 
                 <label for="mensagem">Digite sua Mensagem:</label>
                 <textarea name="mensagem" id="mensagem" rows="10" required></textarea>
                 <br>
-                <button type="submit">
+                <button type="submit" id="botao">
                     Enviar Mensagem
                 </button>
             </form>
@@ -103,6 +103,52 @@
         function mostrarMenu(){
             //document.querySelector(".nav-menu")
             $(".header-nav").toggle();
+        }
+    </script>
+
+    <script>
+        //Captura o botão pelo ID e adiciona o evento do clique
+        document.getElementById("botao").onclick = function(){
+            //Obtém o valor do campo Nome
+            var nome = document.getElementById("nome").value;
+            //Obtém o valor do campo E-Mail
+            var email = document.getElementById("email").value;
+             //Obtém o valor do campo Telefone
+            var telefone = document.getElementById("telefone").value;
+
+            //Teste de validação de E-Mail
+            const validarEmail = (email) => {
+                //TEXTO@TEXTO.TEXTO
+                const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
+                return regex.test(email);
+            }
+            const validar = validarEmail(email);
+            // Verifica se todos os cmapos estão vazios ao mesmo tempo
+
+            if(nome == "" && email == "" && telefone == ""){
+                alert("Por favor, preencha todos os campos!")//Emite um alerta par ainformar que todos os campos estão vazios
+            }else{
+                //Verificação individual
+                if(nome == ""){
+                    alert("Preencha o campo nome!")
+                }
+
+                if(email == ""){
+                    alert("Preencha o campo E-Mail!")
+                //Caso o E-Mail não esteja vazio, pórem é ínvalido
+                }else if (!validar){
+                    alert("O E-Mail é inválido!")
+                }
+
+                if(telefone == ""){
+                    alert("Preencha o campo Telefone!")
+                }
+
+            }
+
+            if(nome != "" && email != "" && telefone != "" && validar){
+                alert("O formulário foi enviado com sucesso!")
+            }
         }
     </script>
 </body>
