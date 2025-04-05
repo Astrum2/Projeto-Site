@@ -57,34 +57,50 @@ body{
 
 main{
     padding: 50px;
-    #Apresentação{
-        .Container{
-            width: 90%;
-            margin: auto;
-            h1{
-                text-align: center;
-                .Faixa{
-                    font: Arial;
-                    background-color: black;
-                    color: white;
-                    padding: 10px;
-                    margin: 20px;
-                    border-radius: 5px;
-                }
-            }
-            .grid-2{
-                display: block;
-                .col{
-                    padding: 15px;
-                    img{
-                        width: 110%;
-                        align-items: center;
-                    }
-                }
-            }   
+       .Container{
+         width: 90%;
+           margin: auto;
+          h1{
+               text-align: center;
+               .Faixa{
+                  font: Arial;
+                  background-color: black;
+                  color: white;
+                   padding: 10px;
+                margin: 20px;
+                border-radius: 5px;
+             }
         }
-    } 
-}
+        .grid-2{
+             display: block;
+               .col{
+                  padding: 15px;
+                 img{
+                     width: 110%;
+                    align-items: center;
+                 }
+             }
+         }   
+     }
+     form{
+        display: block;
+        input, textarea{
+            width: 100%;
+            margin: 5px 0;
+            border: 1px solid red;
+            padding: 5px 0;
+        }
+        button{
+            background-color: green;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            border: 0;
+        }
+     }
+} 
+
 
 footer{
     background-color: black;
@@ -149,12 +165,11 @@ footer{
                 }
             }
         }
-        
     }
     footer{
         background-color: black;
         color: white;
-        padding: 50px 0;
+        padding: 25px 0;
         .center{
             text-align: center;
             text-transform: uppercase;

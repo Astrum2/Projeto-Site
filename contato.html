@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <link href="style.css" rel="stylesheet">
     <title>Primeiro Projeto</title>
 </head>
@@ -52,6 +53,49 @@
             </nav>
         </div>
     </header>
+</header>
+<main>
+    <section id="Faixa">
+        <div class="Container">
+            <h1>
+                 <span class="Faixa">
+                    <i class="fa-solid fa-camera"></i>
+                      Contato
+                 </span>
+            </h1>
+            <br>
+            <form name="FormContato" method="post">
+                <label for="nome">Digite seu Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" required>
+
+                <br>
+
+                <label for="email">Digite seu E-Mail:</label>
+                <input type="text" name="email" id="email" placeholder="Digite seu E-mail" required>
+
+                <label for="whatsapp">Digite seu Whatsapp:</label>
+                <input type="number" name="whatsapp" id="whatsapp" placeholder="Digite seu número de whatsapp" required>
+
+                <br>
+
+                <label for="mensagem">Digite sua Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" rows="10" required></textarea>
+                <br>
+                <button type="submit">
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+
+
+<footer class="footer">
+    <div class="center">
+        <p> Desenvolvido por João Pedro Nascimento Agostinho</p>
+    </div>
+</footer>
+
 
     <script src="JS/jquery-1.11.3.min.js"></script>
     <script src="JS/aos.js"></script>
