@@ -71,13 +71,14 @@ main{
                 border-radius: 5px;
              }
         }
-        .grid-2{
-             display: block;
+        .grid-3{
+             display: grid;
+             grid-template-columns: repeat(3, 33%);
                .col{
-                  padding: 15px;
+                  padding: 50px;
                  img{
                      width: 110%;
-                    align-items: center;
+                     align-items: center;
                  }
              }
          }   
@@ -87,7 +88,7 @@ main{
         input, textarea{
             width: 100%;
             margin: 5px 0;
-            border: 1px solid red;
+            border: 1px solid black;
             padding: 5px 0;
         }
         button{
@@ -98,12 +99,16 @@ main{
             font-size: 20px;
             border: 0;
         }
+        button:hover{
+            background-color: darkgreen;
+            transition: all 1s;
+        }
      }
 } 
 
 
 footer{
-    background-color: black;
+    background-color: #333333;
     color: white;
     padding: 20px 0;
     .center{
@@ -166,8 +171,31 @@ footer{
             }
         }
     }
+    form{
+        display: block;
+        input, textarea{
+            width: 100%;
+            margin: 10px 0;
+            border: 1px solid red;
+            padding: 5px 0;
+        }
+        button{
+            background-color: green;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            border: 0;
+        }
+        button:hover{
+            background-color: darkgreen;
+            transition: all 1s;
+        }
+     }
+
+     
     footer{
-        background-color: black;
+        background-color: #333333;
         color: white;
         padding: 25px 0;
         .center{
