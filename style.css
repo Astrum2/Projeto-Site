@@ -45,12 +45,6 @@ body{
                 text-transform: uppercase;
                 font-weight: bold;
             }
-            .btn{
-                background-color: red;
-            }
-            .btn:hover{
-                background-color: brown;
-            }
         }
     }
 }
@@ -67,15 +61,15 @@ main{
                   background-color: black;
                   color: white;
                    padding: 10px;
-                margin: 20px;
-                border-radius: 5px;
+                    margin: 20px;
+                    border-radius: 5px;
              }
         }
         .grid-3{
              display: grid;
-             grid-template-columns: repeat(3, 33%);
+             grid-template-columns: repeat(1, 100%);
                .col{
-                  padding: 50px;
+                  padding: 10px;
                  img{
                      width: 110%;
                      align-items: center;
@@ -84,26 +78,34 @@ main{
          }   
      }
      form{
-        display: block;
+        label{
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
         input, textarea{
             width: 100%;
-            margin: 5px 0;
-            border: 1px solid black;
-            padding: 5px 0;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
         }
         button{
-            background-color: green;
-            text-decoration: none;
+            background-color: #008000;
             color: white;
-            padding: 10px;
-            font-size: 20px;
-            border: 0;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
         }
         button:hover{
             background-color: darkgreen;
-            transition: all 1s;
+            transition:  0.3s ease;;
         }
-     }
+    }
 } 
 
 
@@ -117,43 +119,45 @@ footer{
     }
 }
 
-@media (min-width: 1000px){
-    .header{
-        .header-menu{
-            display: none;
-        }
-        .header-nav{
-            display: block;
-            float: right;
-            border: 0;
-            ul{
-                li{
-                    display: inline-block;
-                    a{
-                        padding: 27px;
-                    }
-                    a:hover{
-                        color: white;
-                        border-bottom: 5px solid red;
-                        padding: 27px;
-                    }
-                    .btn{
-                        background-color: red;
-                        padding: 10px 20px 10px 20px;
-                    }
-                    .btn:hover{
-                        color: white;
-                        background-color: brown;
-                        padding: 10px 20px 10px 20px;
+@media (min-width: 999px){
+        .header{
+            .header-menu{
+                display: none;
+            }
+            .header-nav{
+                display: block;
+                float: right;
+                border: 0;
+                ul{
+                    li{
+                        display: inline-block;
+                        a{
+                            padding: 27px;
+                        }
+                        a:hover{
+                            color: white;
+                            border-bottom: 5px solid red;
+                            padding: 27px;
+                        }
+                        .btn{
+                            background-color: red;
+                            padding: 10px 20px 10px 20px;
+                        }
+                        .btn:hover{
+                            color: white;
+                            background-color: brown;
+                            padding: 10px 20px 10px 20px;
+                            border-bottom: 0px;
+                        }
                     }
                 }
             }
         }
-    }
-    main{
-        padding: 50px;
-        #Apresentação{
+        main{
+            padding: 50px;
             .Container{
+                width: 90%;
+                margin: auto;
                 h1{
                     text-align: center;
                     .Faixa{
@@ -165,42 +169,56 @@ footer{
                         border-radius: 5px;
                     }
                 }
-                .grid-2{
-                    max-width: 1000px;
-                }
+                .grid-3{
+                    display: grid;
+                    grid-template-columns: repeat(3, 33%);
+                    .col{
+                        padding: 50px;
+                        img{
+                            width: 110%;
+                            align-items: center;
+                        }
+                    }
+                }   
+                }   
+        form{
+            label{
+                display: block;
+                margin-top: 15px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            input, textarea{
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 14px;
+            }
+            button{
+                background-color: #008000;
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            button:hover{
+                background-color: darkgreen;
+                transition:  0.3s ease;;
             }
         }
-    }
-    form{
-        display: block;
-        input, textarea{
-            width: 100%;
-            margin: 10px 0;
-            border: 1px solid red;
-            padding: 5px 0;
-        }
-        button{
-            background-color: green;
-            text-decoration: none;
-            color: white;
-            padding: 10px;
-            font-size: 20px;
-            border: 0;
-        }
-        button:hover{
-            background-color: darkgreen;
-            transition: all 1s;
-        }
-     }
 
-     
-    footer{
-        background-color: #333333;
-        color: white;
-        padding: 25px 0;
-        .center{
-            text-align: center;
-            text-transform: uppercase;
+        footer{
+            background-color: #333333;
+            color: white;
+            padding: 25px 0;
+            .center{
+                text-align: center;
+                text-transform: uppercase;
+            }
         }
     }
 }

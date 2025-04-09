@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" href="Imagens/Vírus1.png">
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="style.css">
     <title>Primeiro Projeto</title>
 </head>
 <body>
@@ -45,8 +47,8 @@
                         </a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-play"></i>
                         <a href="jogar.html" title="Jogar" class="btn">
+                            <i class="fa-solid fa-play"></i>
                             Jogar
                         </a>
                     </li>
@@ -61,7 +63,7 @@
         <div class="Container">
             <h1>
                  <span class="Faixa">
-                    <i class="fa-solid fa-camera"></i>
+                    <i class="fa-solid fa-envelope"></i>
                       Contato
                  </span>
             </h1>
@@ -76,7 +78,7 @@
                 <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required>
 
                 <label for="telefone">Digite seu telefone:</label>
-                <input type="number" name="telefone" id="telefone" placeholder="Digite seu número de Telefone" required>
+                <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999" required>
 
                 <br>
 
@@ -101,6 +103,7 @@
 
     <script src="JS/jquery-1.11.3.min.js"></script>
     <script src="JS/aos.js"></script>
+
     <script>
         function mostrarMenu(){
             //document.querySelector(".nav-menu")
@@ -124,6 +127,13 @@
                 const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
                 return regex.test(email);
             }
+
+            const validarTelefone = (telefone) => {
+                const regextelefone = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+                return regextelefone.test(telefone);
+            }
+
+            const validação = validarTelefone(telefone)
             const validar = validarEmail(email);
             // Verifica se todos os cmapos estão vazios ao mesmo tempo
 
@@ -144,11 +154,13 @@
 
                 if(telefone == ""){
                     alert("Preencha o campo Telefone!")
+                } else if (!validação){
+                    alert("O Telefone é ínvalido!")
                 }
 
             }
 
-            if(nome != "" && email != "" && telefone != "" && validar){
+            if(nome != "" && email != "" && telefone != "" && validar && validação){
                 alert("O formulário foi enviado com sucesso!")
             }
         }
