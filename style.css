@@ -8,7 +8,7 @@ body{
     font-size: 18px;
 }
 .container{
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
@@ -42,7 +42,6 @@ body{
                 text-transform: uppercase;
                 color: #CCC;
                 text-decoration: none;
-                text-transform: uppercase;
                 font-weight: bold;
             }
         }
@@ -126,8 +125,8 @@ footer{
             }
             .header-nav{
                 display: block;
-                float: right;
                 border: 0;
+                float: right;
                 ul{
                     li{
                         display: inline-block;
@@ -137,6 +136,7 @@ footer{
                         a:hover{
                             color: white;
                             border-bottom: 5px solid red;
+                            transition: 1s ease;
                             padding: 27px;
                         }
                         .btn{
@@ -208,6 +208,14 @@ footer{
             button:hover{
                 background-color: darkgreen;
                 transition:  0.3s ease;;
+            }
+        }
+
+        .jogo{
+            .btn-jogo{
+                background-color: #008000;
+                color: white;
+                text-decoration: none;
             }
         }
 

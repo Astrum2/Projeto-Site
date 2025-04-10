@@ -11,159 +11,149 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="style.css">
-    <title>Primeiro Projeto</title>
+    <title>Body Invaders</title>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <a href="index.html" title="home"  class="header-logo">
-                <img src="Imagens/Icone.png" alt="Marvel">
+            <a href="index.html" title="Home" class="header-logo">
+                <img src="Imagens/Icone.png" alt="Body Invaders Logo">
             </a>
-
-            <a href="javascript:mostrarMenu()" title="menu" class="header-menu">
+    
+            <a href="javascript:mostrarMenu()" title="Menu" class="header-menu">
                 <i class="fa-solid fa-bars"></i>
             </a>
-
+    
             <nav class="header-nav">
                 <ul>
                     <li>
-                        <a href="index.html" title="Home">
-                            Home
-                        </a>
+                        <a href="index.html" title="Home">Home</a>
                     </li>
                     <li>
-                        <a href="sobre.html" title="Sobre">
-                            Sobre
-                        </a>
+                        <a href="sobre.html" title="Sobre">Sobre</a>
                     </li>
                     <li>
-                        <a href="galeria.html" title="Galeria">
-                            Galeria
-                        </a>
+                        <a href="galeria.html" title="Galeria">Galeria</a>
                     </li>
                     <li>
-                        <a href="contato.html" title="Contato">
-                            Contato
-                        </a>
+                        <a href="contato.html" title="Contato">Contato</a>
                     </li>
                     <li>
                         <a href="jogar.html" title="Jogar" class="btn">
-                            <i class="fa-solid fa-play"></i>
-                            Jogar
+                            <i class="fa-solid fa-play"></i> Jogar
                         </a>
                     </li>
-                </ul>
                 </ul>
             </nav>
         </div>
     </header>
-</header>
-<main>
-    <section id="Faixa">
-        <div class="Container">
-            <h1>
-                 <span class="Faixa">
-                    <i class="fa-solid fa-envelope"></i>
-                      Contato
-                 </span>
-            </h1>
-            <br>
-            <form name="FormContato" method="post">
-                <label for="nome">Digite seu Nome:</label>
-                <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" required>
-
+    <main>
+        <section id="Faixa">
+            <div class="Container">
+                <h1>
+                    <span class="Faixa">
+                        <i class="fa-solid fa-envelope"></i>
+                        Contato
+                    </span>
+                </h1>
                 <br>
+                <form name="FormContato" method="post">
+                    <label for="nome">Digite seu Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" required>
 
-                <label for="email">Digite seu E-Mail:</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required>
+                    <br>
 
-                <label for="telefone">Digite seu telefone:</label>
-                <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999" required>
+                    <label for="email">Digite seu E-Mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required>
 
-                <br>
+                    <label for="telefone">Digite seu telefone:</label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999" required>
 
-                <label for="mensagem">Digite sua Mensagem:</label>
-                <textarea name="mensagem" id="mensagem" rows="10" required></textarea>
-                <br>
-                <button type="submit" id="botao">
-                    Enviar Mensagem
-                </button>
-            </form>
+                    <br>
+
+                    <label for="mensagem">Digite sua Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem" rows="10" required></textarea>
+                    <br>
+                    <button type="submit" id="botao">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="center">
+            <p> Desenvolvido por João Pedro Nascimento Agostinho</p>
         </div>
-    </section>
-</main>
+    </footer>
 
 
-<footer class="footer">
-    <div class="center">
-        <p> Desenvolvido por João Pedro Nascimento Agostinho</p>
-    </div>
-</footer>
+        <script src="JS/jquery-1.11.3.min.js"></script>
+        <script src="JS/aos.js"></script>
 
-
-    <script src="JS/jquery-1.11.3.min.js"></script>
-    <script src="JS/aos.js"></script>
-
-    <script>
-        function mostrarMenu(){
-            //document.querySelector(".nav-menu")
-            $(".header-nav").toggle();
-        }
-    </script>
-
-    <script>
-        //Captura o botão pelo ID e adiciona o evento do clique
-        document.getElementById("botao").onclick = function(){
-            //Obtém o valor do campo Nome
-            var nome = document.getElementById("nome").value;
-            //Obtém o valor do campo E-Mail
-            var email = document.getElementById("email").value;
-             //Obtém o valor do campo Telefone
-            var telefone = document.getElementById("telefone").value;
-
-            //Teste de validação de E-Mail
-            const validarEmail = (email) => {
-                //TEXTO@TEXTO.TEXTO
-                const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
-                return regex.test(email);
+        <script>
+            function mostrarMenu(){
+                //document.querySelector(".nav-menu")
+                $(".header-nav").toggle();
             }
+        </script>
 
-            const validarTelefone = (telefone) => {
-                const regextelefone = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
-                return regextelefone.test(telefone);
-            }
+        <script>
+            //Captura o botão pelo ID e adiciona o evento do clique
+            document.getElementById("botao").onclick = function(){
+                //Obtém o valor do campo Nome
+                var nome = document.getElementById("nome").value;
+                //Obtém o valor do campo E-Mail
+                var email = document.getElementById("email").value;
+                //Obtém o valor do campo Telefone
+                var telefone = document.getElementById("telefone").value;
 
-            const validação = validarTelefone(telefone)
-            const validar = validarEmail(email);
-            // Verifica se todos os cmapos estão vazios ao mesmo tempo
-
-            if(nome == "" && email == "" && telefone == ""){
-                alert("Por favor, preencha todos os campos!")//Emite um alerta par ainformar que todos os campos estão vazios
-            }else{
-                //Verificação individual
-                if(nome == ""){
-                    alert("Preencha o campo nome!")
+                //Teste de validação de E-Mail
+                const validarEmail = (email) => {
+                    //TEXTO@TEXTO.TEXTO
+                    const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
+                    return regex.test(email);
                 }
 
-                if(email == ""){
-                    alert("Preencha o campo E-Mail!")
-                //Caso o E-Mail não esteja vazio, pórem é ínvalido
-                }else if (!validar){
-                    alert("O E-Mail é inválido!")
+                const validarTelefone = (telefone) => {
+                    const regextelefone = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+                    return regextelefone.test(telefone);
                 }
 
-                if(telefone == ""){
-                    alert("Preencha o campo Telefone!")
-                } else if (!validação){
-                    alert("O Telefone é ínvalido!")
+                const validação = validarTelefone(telefone)
+                const validar = validarEmail(email);
+                // Verifica se todos os campos estão vazios ao mesmo tempo
+
+                if(nome == "" && email == "" && telefone == ""){
+                    alert("Por favor, preencha todos os campos!")//Emite um alerta par ainformar que todos os campos estão vazios
+                }else{
+                    //Verificação individual
+                    if(nome == ""){
+                        alert("Preencha o campo nome!")
+                    }
+
+                    if(email == ""){
+                        alert("Preencha o campo E-Mail!")
+                    //Caso o E-Mail não esteja vazio, pórem é ínvalido
+                    }else if (!validar){
+                        alert("O E-Mail é inválido!")
+                    }
+
+                    if(telefone == ""){
+                        alert("Preencha o campo Telefone!")
+                    } else if (!validação){
+                        alert("O Telefone é ínvalido!")
+                    }
+
                 }
 
+                if(nome != "" && email != "" && telefone != "" && validar && validação){
+                    alert("O formulário foi enviado com sucesso!")
+                }
             }
+        </script>
 
-            if(nome != "" && email != "" && telefone != "" && validar && validação){
-                alert("O formulário foi enviado com sucesso!")
-            }
-        }
-    </script>
 </body>
 </html>
