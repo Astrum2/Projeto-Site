@@ -128,14 +128,6 @@ footer{
 }
 
 @media (min-width: 999px){
-    .btn{
-        background: #F00;
-        color: #FFF;
-        text-decoration: none;
-        font: 20px "Lilita One", Roboto;
-        padding: 10px;
-        border: 0;
-    }
         .header{
             .header-menu{
                 display: none;
