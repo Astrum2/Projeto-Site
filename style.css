@@ -12,6 +12,15 @@ body{
     margin: auto;
 }
 
+.btn{
+    background: #F00;
+    color: #FFF;
+    text-decoration: none;
+    font: 20px "Lilita One", Roboto;
+    padding: 10px;
+    border: 0;
+}
+
 .header{
     background-color: #222;
     .header-logo{
@@ -119,6 +128,14 @@ footer{
 }
 
 @media (min-width: 999px){
+    .btn{
+        background: #F00;
+        color: #FFF;
+        text-decoration: none;
+        font: 20px "Lilita One", Roboto;
+        padding: 10px;
+        border: 0;
+    }
         .header{
             .header-menu{
                 display: none;
@@ -179,8 +196,9 @@ footer{
                             align-items: center;
                         }
                     }
-                }   
-                }   
+                } 
+            }  
+    
         form{
             label{
                 display: block;
@@ -208,14 +226,6 @@ footer{
             button:hover{
                 background-color: darkgreen;
                 transition:  0.3s ease;;
-            }
-        }
-
-        .jogo{
-            .btn-jogo{
-                background-color: #008000;
-                color: white;
-                text-decoration: none;
             }
         }
 
