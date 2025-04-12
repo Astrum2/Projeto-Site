@@ -57,7 +57,7 @@
                     </span>
                 </h1>
                 <br>
-                <form name="FormContato" method="post" action="enviar.php">
+                <form name="FormContato" method="post"></form>
                     <label for="nome">Digite seu Nome:</label>
                     <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" required>
 
@@ -152,6 +152,9 @@
                 if(nome != "" && email != "" && telefone != "" && validar && validação){
                     alert("O formulário foi enviado com sucesso!")
                 }
+            }
+            document.getElementById("botao").onclick = function(event){
+                event.preventDefault();
             }
         </script>
 
