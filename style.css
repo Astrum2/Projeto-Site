@@ -4,7 +4,7 @@
 }
 body{
     font-family: Roboto, Arial;
-    color: #333;
+    color: black;
     font-size: 18px;
 }
 .container{
@@ -22,7 +22,7 @@ body{
 }
 
 .header{
-    background-color: #222;
+    background-color: black;
     .header-logo{
         img{
             height: 80px;
@@ -60,30 +60,40 @@ body{
 main{
     padding: 50px;
        .Container{
-         width: 90%;
-           margin: auto;
-          h1{
-               text-align: center;
-               .Faixa{
-                  font: Arial;
-                  background-color: black;
-                  color: white;
-                   padding: 10px;
+            h1{
+                text-align: center;
+                margin-bottom: 20px;
+                .Faixa{
+                    font: Arial;
+                    background-color: black;
+                    color: white;
+                    padding: 10px;
                     margin: 20px;
                     border-radius: 5px;
-             }
-        }
-        .grid-3{
-             display: grid;
-             grid-template-columns: repeat(1, 100%);
-               .col{
-                  padding: 10px;
-                 img{
-                     width: 110%;
-                     align-items: center;
-                 }
-             }
-         }   
+                }
+            }
+            .grid-3{
+                display: grid;
+                grid-template-columns: repeat(1, 100%);
+                .col{
+                    padding: 10px;
+                    img{
+                        width: 110%;
+                        align-items: center;                    
+                        }
+                    }
+            }
+            #informação{
+                p{
+                    text-align: justify;
+                }
+            }
+            #Controles{
+                h1{
+                    margin-bottom: 20px;
+                }
+            }
+
      }
      form{
         label{
@@ -194,10 +204,27 @@ footer{
                         img{
                             width: 110%;
                             align-items: center;
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;                       
+                        }
+                        img:hover{
+                            transform: scale(1.05);
+                            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
                         }
                     }
                 } 
             }  
+            #informação{
+                text-align: center;
+                p{
+                    margin-top: 20px;;
+                }
+            }
+            #Controles{
+                p{
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
     
         form{
             label{
