@@ -248,9 +248,6 @@ footer{
                         }
                     }
                 } 
-                .jogar{
-                    margin-top: 20px;
-                }
             }  
             #informação{
                 text-align: center;
@@ -267,6 +264,12 @@ footer{
             #Controles{
                 margin-top: 50px;
                 p{
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+            #jogo{
+                .jogar{
                     text-align: center;
                     margin-top: 20px;
                 }
