@@ -67,7 +67,7 @@
                     <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required>
 
                     <label for="telefone">Digite seu telefone:</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999" required>
+                    <input type="text" name="telefone" id="telefone" placeholder="(99) 99999-9999" required>
 
                     <br>
 
@@ -94,6 +94,7 @@
 
         <script src="JS/jquery-1.11.3.min.js"></script>
         <script src="JS/aos.js"></script>
+        <script src="js/vanilla-masker.js"></script>
 
         <script>
             function mostrarMenu(){
@@ -159,5 +160,9 @@
             }
         </script>
 
+        <script>
+            // Máscara para o campo telefone
+            VMasker(document.querySelector("#telefone")).maskPattern("(99) 99999-9999");
+        </script>
 </body>
 </html>
