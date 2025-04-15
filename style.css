@@ -16,9 +16,17 @@ body{
     background: #F00;
     color: #FFF;
     text-decoration: none;
-    font: 20px "Lilita One", Roboto;
+    font: 20px, Roboto;
     padding: 10px;
     border: 0;
+}
+
+.imgSobre{
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+    height: auto;
+    border: 2px solid blue;
 }
 
 .header{
@@ -64,7 +72,7 @@ main{
                 text-align: center;
                 margin-bottom: 20px;
                 .Faixa{
-                    font: Arial;
+                    font: Roboto, Arial;
                     background-color: black;
                     color: white;
                     padding: 10px;
@@ -86,6 +94,12 @@ main{
             #informação{
                 p{
                     text-align: justify;
+                }
+                .btn-jogar{
+                    align-content: center;
+                }
+                a{
+                    text-align: center;
                 }
             }
             #Controles{
@@ -138,6 +152,12 @@ footer{
 }
 
 @media (min-width: 999px){
+    .imgSobre{
+        display: block; /* Ensures the image behaves like a block element */
+        margin: 20px auto; /* Centers the image horizontally */
+        max-width: 200px; /* Ensures the image is responsive */
+        height: auto;
+    }
     .btn{
         background: #F00;
         color: #FFF;
@@ -212,14 +232,37 @@ footer{
                         }
                     }
                 } 
+                .grid-2{
+                    display: grid;
+                    grid-template-columns: repeat(2, 50%);
+                    .col{
+                        padding: 50px;
+                        img{
+                            width: 110%;
+                            align-items: center;
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;                       
+                        }
+                        img:hover{
+                            transform: scale(1.05);
+                            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                        }
+                    }
+                } 
             }  
             #informação{
                 text-align: center;
                 p{
                     margin-top: 20px;;
                 }
+                .btn:hover{
+                    color: white;
+                    background-color: brown;
+                    border-bottom: 0px;
+                    transition: ease 1s;
+                }
             }
             #Controles{
+                margin-top: 50px;
                 p{
                     text-align: center;
                     margin-top: 20px;

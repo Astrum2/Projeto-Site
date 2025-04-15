@@ -15,8 +15,8 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="index.html" title="home"  class="header-logo">
-                <img src="Imagens/Icone.png" alt="Marvel">
+            <a href="index.html" title="home" class="header-logo">
+                <img src="Imagens/Icone.png" alt="Icone">
             </a>
 
             <a href="javascript:mostrarMenu()" title="menu" class="header-menu">
@@ -67,16 +67,18 @@
                 </h1>
             </div>
         </section>
-    
+        <img src="Imagens/Icone-2.png" alt="imagem" class="imgSobre">
         <section id="informação">
             <div class="container">
                 <br>
                 <p>Body Invaders é um jogo feito no estilo do famoso <strong>Space Invaders</strong>, onde você, o player, assume o papel de um <strong>glóbulo branco</strong>, enquanto seu corpo está sobre ataque!
                 </p>
                 <br>
-                <p>O objetivo do jogo é eliminar os vírus que estão invadindo seu corpo, enquanto você tenta evitar os ataques de seus inimigos, que estão tentando te impedir de cumprir sua missão!</p>
+                <p>O objetivo do jogo é eliminar os vírus que estão invadindo seu corpo, enquanto você tenta evitar os ataques de seus inimigos, que estão tentando te impedir de cumprir sua missão! Para resolver isso, elimine todos os vírus e bactérias que invadiram o corpo!</p>
                 <br>
-                <a href="jogar.html" class="btn">
+                </p>
+                <p class="btn-jogar">
+                    <a href="jogar.html" class="btn">
                         <i class="fa-solid fa-play"></i> Jogar
                     </a>
                 </p>
@@ -92,11 +94,18 @@
                     </span>
                 </h1>
                 <p> Os controles são simples e intuitivos: </p>
-                <p>A <strong>Barra de Espaço</strong> é usada para poder atirar</p>
-                <br>
-                <p>As <strong>Setas do Teclado</strong> são usadas para mover o glóbulo branco para a esquerda e para a direita</p>
-                <br>
-                <p>Caso você ache melhor, as teclas <strong>A e D</strong> podem ser usadas ao invés das setas</p>
+                <div class="grid-2">
+                    <div class="col">
+                        <img src="Imagens/Tiro.png" alt="Tiro">
+                        <p>A <strong>Barra de Espaço</strong> é usada para poder atirar</p>
+                    </div>
+                    <div class="col">
+                        <img src="Imagens/Teclas.png" alt="teclas">
+                        <p>As <strong>Setas do Teclado</strong> são usadas para mover o glóbulo branco para a esquerda (<i class="fa-solid fa-arrow-left"></i>) e para a direita (<i class="fa-solid fa-arrow-right"></i>)</p>
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -104,6 +113,8 @@
 
     <footer class="footer">
         <div class="center">
+            <p>Body Invaders</p>
+            <br>
             <p> Desenvolvido por João Pedro Nascimento Agostinho</p>
         </div>
     </footer>
