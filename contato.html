@@ -95,6 +95,7 @@
         <script src="JS/jquery-1.11.3.min.js"></script>
         <script src="JS/aos.js"></script>
         <script src="JS/vanilla-masker.js"></script>
+        <script src="JS/sweetalert2.all.min.js"></script>
 
         <script>
             function mostrarMenu(){
@@ -130,30 +131,64 @@
                 // Verifica se todos os campos estão vazios ao mesmo tempo
 
                 if(nome == "" && email == "" && telefone == ""){
-                    alert("Por favor, preencha todos os campos!")//Emite um alerta para informar que todos os campos estão vazios
+                    Swal.fire({
+                        title: 'Preencha os campos!',
+                        text: "Preencha todos os campos!",
+                        icon: 'warning',
+                        confirmButtonText: 'OK'
+                    })
                 }else{
                     //Verificação individual
                     if(nome == ""){
-                        alert("Preencha o campo nome!")
+                        swal.fire({
+                            title: 'Preencha o campo Nome!',
+                            text: "Preencha o campo Nome!",
+                            icon: 'warning',
+                            confirmButtonText: 'OK'
+                        });
                     }
 
                     if(email == ""){
-                        alert("Preencha o campo E-Mail!")
-                    //Caso o E-Mail não esteja vazio, pórem é ínvalido
+                        swal.fire({
+                            title: 'Preencha o campo E-Mail!',
+                            text: "Preencha o campo E-Mail!",
+                            icon: 'warning',
+                            confirmButtonText: 'OK'
+                        });
                     }else if (!validar){
-                        alert("O E-Mail é inválido!")
+                        swal.fire({
+                            title: 'E-Mail inválido!',
+                            text: "O E-Mail é ínvalido!",
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
                     }
 
-                    if(telefone == ""){
-                        alert("Preencha o campo Telefone!")
+                    if(telefone == "(99) 99999-9999"){
+                        swal.fire({
+                            title: 'Preencha o campo Telefone!',
+                            text: "Preencha o campo Telefone!",
+                            icon: 'warning',
+                            confirmButtonText: 'OK'
+                        });
                     } else if (!validação){
-                        alert("O Telefone é ínvalido!")
+                        swal.fire({
+                            title: "O telefone é Inválido!",
+                            text: "O telefone é inválido!",
+                            icon: 'error',
+                            confirmButtonText: "OK"
+                        })
                     }
 
                 }
 
                 if(nome != "" && email != "" && telefone != "" && validar && validação){
-                    alert("O formulário foi enviado com sucesso!")
+                    Swal.fire({
+                        title: 'Mensagem Enviada!',
+                        text: "Obrigado por entrar em contato!",
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
                 }
 
                 event.preventDefault();
