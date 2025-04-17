@@ -114,6 +114,8 @@
                 //Obtém o valor do campo Telefone
                 var telefone = document.getElementById("telefone").value;
 
+                var mensagem = document.getElementbyId("mensagem").value;
+
                 //Teste de validação de E-Mail
                 const validarEmail = (email) => {
                     //TEXTO@TEXTO.TEXTO
@@ -189,6 +191,7 @@
                         icon: 'success',
                         confirmButtonText: 'OK'
                     });
+                    console.log(mensagem)
                 }
 
                 event.preventDefault();
